@@ -2,7 +2,7 @@ PR Management Tool by Rosely Inc. by: Ivan Alcuino
 
 1. npm i -g pnpm // if pnpm is not yet installed
 2. pnpm install
-3. pnpm db:gen or prisma generate
+3. pnpm db:gen
 
 # prisma db push
 pnpm db:push

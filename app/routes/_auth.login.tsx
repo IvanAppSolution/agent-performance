@@ -49,9 +49,7 @@ export default function loginRoute() {
     onValidate({ formData }) {
       return parse(formData, { schema: schemaUserLogIn })
     },
-    defaultValue: isModeDevelopment
-      ? { email: "user1@gmail.com", password: "pass1234" }
-      : {},
+    defaultValue: { email: "user1@gmail.com", password: "pass1234" },
   })
 
   return (
