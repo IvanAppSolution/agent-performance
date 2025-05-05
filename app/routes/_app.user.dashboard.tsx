@@ -894,34 +894,33 @@ export default function UserDashboardRoute() {
         <Card className="sm:w-8/12 md:w-8/12 lg:w-5/12 xl:w-5/12 mt-4 mr-4 rounded-lg border bg-card p-4 text-center text-card-foreground shadow-sm" style={{minWidth:"400px"}}>
           <QSGraph data={monthlyTableScore} className="w-full" title="" customerId={searchData.customerId ?? ""} agentId={searchData.agentId ?? ""} />
         </Card>
-        <div className="flex flex-wrap flex-col">
-          <Card className=" sm:w-8/12 md:w-8/12 lg:w-5/12 xl:w-5/12 mt-4 rounded-lg border bg-card p-4 text-center text-card-foreground shadow-sm" style={{height:"300px", minWidth:"400px"}}>
-          <div className="font-semibold m-auto absolute z-50" style={{width: "35%"}}>
-            Campaign Quality Score &nbsp;
-            <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              value={searchData.campaign}  style={{width: "150px"}} onChange={handleSelectCampaign}>
-              <option key="all" value="0" >All</option>
-              { campaign && campaign.map((c,i) => (
-                <option key={i} value={c.brand || ""} > {c.brand || ""}</option>
-                ))
-              }
-            </select> 
-          </div>
-            <PieGraph
-              data={qualityScoresRating}
-              campaign={campaign}
-              dataKey={["value"]}
-              groupValueNames={["value" ]}
-              className="w-full"
-              title="Quality Score"
-              colors={pieColors}
-              customerId={searchData.customerId ?? ""}
-              agentId={searchData.agentId ?? ""}
-              handleSelectCampaign={handleSelectCampaign}
-              selectedCampaign={searchData.campaign} 
-            />
-          </Card>
+        <Card className=" sm:w-8/12 md:w-8/12 lg:w-5/12 xl:w-5/12 mt-4 rounded-lg border bg-card p-4 text-center text-card-foreground shadow-sm" style={{height:"300px", minWidth:"400px"}}>
+        <div className="font-semibold m-auto absolute z-50" style={{width: "35%"}}>
+          Campaign Quality Score &nbsp;
+          <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            value={searchData.campaign}  style={{width: "150px"}} onChange={handleSelectCampaign}>
+            <option key="all" value="0" >All</option>
+            { campaign && campaign.map((c,i) => (
+              <option key={i} value={c.brand || ""} > {c.brand || ""}</option>
+              ))
+            }
+          </select> 
         </div>
+          <PieGraph
+            data={qualityScoresRating}
+            campaign={campaign}
+            dataKey={["value"]}
+            groupValueNames={["value" ]}
+            className="w-full"
+            title="Quality Score"
+            colors={pieColors}
+            customerId={searchData.customerId ?? ""}
+            agentId={searchData.agentId ?? ""}
+            handleSelectCampaign={handleSelectCampaign}
+            selectedCampaign={searchData.campaign} 
+          />
+        </Card>
+         
       </section>
       {/* <section className="app-section mt-4"> --- Use this if adding extra pie chart below the existing pie chart --- </section> */}
       

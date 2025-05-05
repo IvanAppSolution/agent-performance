@@ -119,13 +119,16 @@ export default function loginRoute() {
             Don't have an account?{" "}
             <LinkText to="/signup" className="transition hover:text-primary">
               Sign up
-            </LinkText>
-          </div>
-          <div className="">
+            </LinkText><br />
             Customer login?{" "}
             <LinkText to="/customer-login" className="transition hover:text-primary">
               Login
             </LinkText>  
+          </div>          
+          <div className="text-sm text-neutral-500">
+            <span className="underline">Test user credentials:</span> <br />
+            <strong>Email: </strong>user1@gmail.com<br />
+            <strong>Password: </strong>pass1234            
           </div>
          
 
