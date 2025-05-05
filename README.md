@@ -1,20 +1,22 @@
-Agent Performance Project by: Ivan Alcuino
-Evaluates the agent performance based on the uploaded csv.
-The dashboard page will display a graphical detail information how much each much it perform over the months.
+# Agent Performance
+Project by: Ivan Alcuino<br/>
+Evaluates the agent performance based on the uploaded csv.<br/>
+The dashboard page will display a graphical detail information how much each much it perform over the months.<br/>
 
-Libraries:
-Remixjs
-radix-ui
-zod
-prisma
-postgresql
+# Libraries
+Remixjs<br/>
+radix-ui<br/>
+zod<br/>
+prisma<br/>
+postgresql<br/>
 
-Host server:
-[vercel](https://agent-performance.vercel.app/)
+Host server: Vercel<br/>
+[agent-performance](https://agent-performance.vercel.app/)<br/>
 
-Dashboard:
+Dashboard:<br/>
 ![Image](https://github.com/user-attachments/assets/e9545aef-4d18-470d-b819-b531d4dca7da)
 
+# Installation
 1. npm i -g pnpm // if pnpm is not yet installed
 2. pnpm install
 3. pnpm db:gen
